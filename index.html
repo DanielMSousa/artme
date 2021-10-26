@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vire uma obra prima</title>
+</head>
+<body>
+    <!-- Aqui é onde eu coloco a prévia -->
+    <!-- Põe para a prévia só aparecer quando ele fizer upload -->
+    <!-- imagem do upload => resultado (imagem com uma seta apontando para o resultado)-->
+    <div class="preview">
+        <img src="./images/example.jpg" width="320" height="213" id="uploaded-image">
+
+        <img src="./images/seta.png">
+        <figure>
+            <img src="./images/example.jpg" width="320" height="213" id="preview-image"/>
+            <img src="download.png" id="download"></img>
+        </figure>
+    </div>
+    <div class="controls">
+        <main>
+            <!-- Aqui é onde o usuário faz o upload -->
+            <input type="file"/>
+            </input type="button" value="upload image">
+        </main>
+        <aside>
+            <div id="option-group">
+                
+            </div>
+        </aside>
+    </div>
+
+    <script src="functions.js"></script>
+</body>
+</html>

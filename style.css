@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+}
+
+body .preview{
+    /*background-color: green;*/
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid lightgray;
+}
+
+body .controls{
+    display: flex;
+    height: calc(100vh - 250px);
+    overflow: auto;
+    border-top: 1px solid lightgray;
+}
+
+body main{
+    /*background-color: red;*/
+    border-right: 1px solid lightgray;
+    width: 30%;
+}
+
+aside{
+    /*background-color: blue;*/
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+}
+
+#option-group{
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    grid-template-rows: 165px;
+    row-gap: 12px;
+    column-gap: 5px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
+.option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.option img{
+    height: 150px;
+    width: 150px;
+}
+
+.option.selected img{
+    height: 150px;
+    width: 150px;
+    border: 10px solid blue;
+}
+
+figure{
+    position: relative;
+}
+
+#download{
+    z-index: 0;
+    background-image: url("download.png");
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    visibility: hidden;
+    opacity: 0;
+}
+
+figure{
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+figure:hover{
+    filter: brightness(50%);
+    transition: 0.5s;
+}
+
+figure:hover #download{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5;
+}
