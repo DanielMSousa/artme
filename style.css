@@ -40,6 +40,7 @@ aside{
     display: flex;
     justify-content: space-evenly;
     overflow-y: scroll;
+    max-height: calc(100hv - calc(100vh - 250px));
 }
 
 #option-group{
@@ -105,3 +106,85 @@ figure:hover #download{
     opacity: 1;
     transition: 0.5;
 }
+
+@media screen and (max-width: 1100px) {
+    #option-group{
+        grid-template-columns: repeat(3, 120px);
+        grid-template-rows: 165px;
+        row-gap: 12px;
+        column-gap: 5px;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .option img{
+        height: 120px;
+        width: 120px;
+    }
+    
+    .option.selected img{
+        height: 120px;
+        width: 120px;
+        border: 10px solid blue;
+    }
+
+    #uploaded-image, #preview-image{
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body{
+        width: 100%;
+    }
+    #option-group{
+        grid-template-columns: repeat(2, 120px);
+        grid-template-rows: 165px;
+        row-gap: 12px;
+        column-gap: 5px;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .option img{
+        height: 120px;
+        width: 120px;
+    }
+ 
+    #uploaded-image, #preview-image{
+        width: 180px;
+    }
+
+    .option.selected img{
+        height: 120px;
+        width: 120px;
+        border: 10px solid blue;
+    }
+}
+
+    @media screen and (max-width: 640px) {
+        body{
+            width: 100%;
+        }
+        
+        #option-group{
+            grid-template-columns: repeat(1, 120px);
+            grid-template-rows: 140px;
+            row-gap: 12px;
+            column-gap: 0;
+            padding: 0;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        
+     
+        #uploaded-image, #preview-image{
+            width: 180px;
+        }
+    
+        .option.selected img{
+            border: 10px solid blue;
+        }
+    }

@@ -23,21 +23,23 @@ fetch('./images.json')
 
 
 const change = i => {
-    if(document.getElementById('upload-file').files[0] == null)
-        preview.src = `./images/example${i}.png`
-    
-        const selected = document.querySelector('.selected')
+    preview.src = `./images/example${i}.png`
+    const selected = document.querySelector('.selected')
     if(selected != null)
         selected.classList.remove('selected')
 
     const gallery = document.getElementById("option-group")
+    console.log(gallery);
     gallery.childNodes[i].classList.add('selected')
 }
 
 const upload = () => { 
     image = document.getElementById('uploaded-image');
     image.src = URL.createObjectURL(document.getElementById('upload-file').files[0]);
+    console.log('amadah?')
 }
+
+
 
 const uploaded = document.getElementById("upload-but")
 uploaded.addEventListener("click", upload)
